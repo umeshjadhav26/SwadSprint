@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodHub Restaurant Management - Approve pending outlets, view active partners, and manage culinary listings.">
+    <title>FoodHub | Manage Restaurants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/manageRestaurants.css">
+    <link rel="stylesheet" href="css/premium-system.css">
+    <link rel="icon" href="images/logo.jpg"/>
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="page-container">
+
+        <!-- Header / Navigation Bar -->
+        <header class="page-header">
+            <div class="brand-logo">
+                <a href="homePage.html" class="brand-link">
+                    <div class="logo-icon">
+                        <span class="logo-emoji">🍔</span>
+                    </div>
+                    <span class="logo-text">FoodHub</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="adminDashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="manageUsers.html" class="nav-item">👥 Users</a>
+                <a href="managerestaurants.jsp" class="nav-item nav-active">🏢 Restaurants</a>
+                <a href="userProfile.jsp" class="nav-item">👤 Profile</a>
+            </nav>
+        </header>
+
+        <!-- Page Title & Overview Actions -->
+        <section class="banner-section">
+            <div>
+                <h1 id="page-title">Manage Restaurants</h1>
+                <p class="page-subtitle">Review active outlets, approve pending listings, and audit business info</p>
+            </div>
+            <div class="system-status-indicator">
+                <span class="system-label">Total Outlets:</span>
+                <span class="system-value">32 Registered</span>
+            </div>
+        </section>
+
+        <!-- Restaurant Lists split into: Pending Approvals & Active Partners -->
+        <div class="management-layout-grid">
+            
+            <!-- LEFT COLUMN: Pending Approvals (Approval Log) -->
+            <main class="pending-section">
+                <h2 class="column-title">Pending Approvals (2)</h2>
+                <div class="pending-cards-list">
+
+                    <!-- Pending Card 1 -->
+                    <div class="pending-card">
+                        <div class="pending-header">
+                            <span class="restaurant-name">Taco Fiesta</span>
+                            <span class="pending-badge">Approval Pending</span>
+                        </div>
+                        <div class="pending-body">
+                            <p class="detail-line"><strong>👤 Owner Name:</strong> Carlos Garcia</p>
+                            <p class="detail-line"><strong>📧 Owner Email:</strong> carlos@fiesta.com</p>
+                            <p class="detail-line"><strong>🍕 Cuisine:</strong> Mexican • Tacos • Burritos</p>
+                            <p class="detail-line"><strong>📍 Address:</strong> Shop 9, Food Plaza, City Center</p>
+                        </div>
+                        <div class="pending-actions">
+                            <button class="btn btn-approve">Approve Listing</button>
+                            <button class="btn btn-decline">Decline Request</button>
+                        </div>
+                    </div>
+
+                    <!-- Pending Card 2 -->
+                    <div class="pending-card">
+                        <div class="pending-header">
+                            <span class="restaurant-name">Green Bowl</span>
+                            <span class="pending-badge">Approval Pending</span>
+                        </div>
+                        <div class="pending-body">
+                            <p class="detail-line"><strong>👤 Owner Name:</strong> Bruce Banner</p>
+                            <p class="detail-line"><strong>📧 Owner Email:</strong> banner@green.com</p>
+                            <p class="detail-line"><strong>🍕 Cuisine:</strong> Healthy • Salads • Diet Bowls</p>
+                            <p class="detail-line"><strong>📍 Address:</strong> 88 Gamma Way, Industrial Zone</p>
+                        </div>
+                        <div class="pending-actions">
+                            <button class="btn btn-approve">Approve Listing</button>
+                            <button class="btn btn-decline">Decline Request</button>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- RIGHT COLUMN: Active Outlets List -->
+            <aside class="active-partners-section">
+                <h2 class="column-title">Active Partners (3)</h2>
+                <div class="active-outlets-list">
+                    
+                    <!-- Active Outlet Card 1 -->
+                    <div class="outlet-card">
+                        <div class="outlet-header-row">
+                            <span class="outlet-emoji">🍕</span>
+                            <div class="outlet-meta">
+                                <h3 class="outlet-name">Pizza Paradise</h3>
+                                <span class="outlet-rating">⭐ 4.8 Rating</span>
+                            </div>
+                        </div>
+                        <div class="outlet-body">
+                            <p class="outlet-owner"><strong>Owner:</strong> John Doe (john@example.com)</p>
+                            <p class="outlet-cuisine">Italian • Pizza • Pasta</p>
+                        </div>
+                        <div class="outlet-footer">
+                            <label class="toggle-status-label">
+                                <input type="checkbox" name="restaurantStatus" checked>
+                                <span class="custom-toggle-btn"></span>
+                                Listing Active
+                            </label>
+                            <button class="btn-delete-outlet" title="Delete Listing">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Active Outlet Card 2 -->
+                    <div class="outlet-card">
+                        <div class="outlet-header-row">
+                            <span class="outlet-emoji">🍛</span>
+                            <div class="outlet-meta">
+                                <h3 class="outlet-name">Spice Kingdom</h3>
+                                <span class="outlet-rating">⭐ 4.6 Rating</span>
+                            </div>
+                        </div>
+                        <div class="outlet-body">
+                            <p class="outlet-owner"><strong>Owner:</strong> Sarah Connor (sarah@example.com)</p>
+                            <p class="outlet-cuisine">Indian • Curry • Biryani</p>
+                        </div>
+                        <div class="outlet-footer">
+                            <label class="toggle-status-label">
+                                <input type="checkbox" name="restaurantStatus" checked>
+                                <span class="custom-toggle-btn"></span>
+                                Listing Active
+                            </label>
+                            <button class="btn-delete-outlet" title="Delete Listing">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Active Outlet Card 3 -->
+                    <div class="outlet-card">
+                        <div class="outlet-header-row">
+                            <span class="outlet-emoji">🍣</span>
+                            <div class="outlet-meta">
+                                <h3 class="outlet-name">Sakura Sushi</h3>
+                                <span class="outlet-rating">⭐ 4.9 Rating</span>
+                            </div>
+                        </div>
+                        <div class="outlet-body">
+                            <p class="outlet-owner"><strong>Owner:</strong> Rick Grimes (rick@example.com)</p>
+                            <p class="outlet-cuisine">Japanese • Sushi • Ramen</p>
+                        </div>
+                        <div class="outlet-footer">
+                            <label class="toggle-status-label">
+                                <input type="checkbox" name="restaurantStatus" checked>
+                                <span class="custom-toggle-btn"></span>
+                                Listing Active
+                            </label>
+                            <button class="btn-delete-outlet" title="Delete Listing">🗑️ Delete</button>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 FoodHub Inc. All rights reserved. Made with ❤️ for food lovers.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/premium-ui.js"></script>
+</body>
+</html>

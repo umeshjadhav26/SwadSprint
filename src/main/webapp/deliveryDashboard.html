@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodHub Delivery Dashboard - Manage deliveries, track earnings, and update drop-off statuses in real time.">
+    <title>FoodHub | Delivery Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/deliveryDashboard.css">
+    <link rel="stylesheet" href="css/premium-system.css">
+    <link rel="icon" href="images/logo.jpg"/>
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="page-container">
+
+        <!-- Header / Navigation Bar -->
+        <header class="page-header">
+            <div class="brand-logo">
+                <a href="homePage.html" class="brand-link">
+                    <div class="logo-icon">
+                        <span class="logo-emoji">🍔</span>
+                    </div>
+                    <span class="logo-text">FoodHub</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="deliveryDashboard.html" class="nav-item nav-active">🏠 Dashboard</a>
+                <a href="deliveryOrders.html" class="nav-item">🛵 Delivery Orders</a>
+                <a href="userProfile.jsp" class="nav-item">👤 Profile</a>
+            </nav>
+        </header>
+
+        <!-- Page Title & Delivery Partner Banner -->
+        <section class="dashboard-banner">
+            <div>
+                <h1 id="page-title">Delivery Dashboard</h1>
+                <p class="page-subtitle">Welcome back, Rick! Keep up the great work.</p>
+            </div>
+            <div class="duty-toggle-card">
+                <span class="duty-label">Duty Status:</span>
+                <span class="duty-indicator">🟢 On Duty</span>
+                <button class="toggle-btn">Go Off Duty</button>
+            </div>
+        </section>
+
+        <!-- Stats Grid -->
+        <section class="stats-grid">
+            
+            <!-- Stat 1 -->
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-info">
+                    <span class="stat-label">Today's Earnings</span>
+                    <span class="stat-value">₹850.00</span>
+                </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="stat-card">
+                <div class="stat-icon">📦</div>
+                <div class="stat-info">
+                    <span class="stat-label">Completed Deliveries</span>
+                    <span class="stat-value">6</span>
+                </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <span class="stat-label">Active Task</span>
+                    <span class="stat-value">1</span>
+                </div>
+            </div>
+
+            <!-- Stat 4 -->
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <span class="stat-label">Rating</span>
+                    <span class="stat-value">4.9 ★</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Grid Layout Split -->
+        <div class="dashboard-grid">
+            
+            <!-- LEFT: Active Delivery Task -->
+            <main class="active-delivery-section">
+                <h2 class="section-title">Active Delivery Task</h2>
+
+                <div class="active-task-card">
+                    <div class="task-header">
+                        <span class="order-id">#UF-9075</span>
+                        <span class="payout-value">Est. Payout: ₹120</span>
+                    </div>
+
+                    <!-- Pickup/Dropoff Timelines -->
+                    <div class="delivery-timeline">
+                        
+                        <!-- Restaurant Pickup -->
+                        <div class="timeline-step">
+                            <div class="step-marker marker-pickup">🏬</div>
+                            <div class="step-details">
+                                <h4 class="step-title">Pickup Restaurant</h4>
+                                <p class="step-name">Pizza Paradise</p>
+                                <p class="step-address">Shop 12, Pizza Street, City Center</p>
+                            </div>
+                        </div>
+
+                        <!-- Customer Dropoff -->
+                        <div class="timeline-step">
+                            <div class="step-marker marker-dropoff">📍</div>
+                            <div class="step-details">
+                                <h4 class="step-title">Dropoff Customer</h4>
+                                <p class="step-name">David Miller</p>
+                                <p class="step-address">202 Elm Street, East Zone</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Order Items Details -->
+                    <div class="order-items-list">
+                        <span class="list-title">Ordered Items:</span>
+                        <ul>
+                            <li>3x Margherita Pizza</li>
+                            <li>2x Iced Lemonade</li>
+                        </ul>
+                    </div>
+
+                    <!-- Task Footer Actions -->
+                    <div class="task-footer">
+                        <div class="payment-method-badge">
+                            <span>Payment: 💳 Paid Online</span>
+                        </div>
+                        <div class="action-buttons">
+                            <!-- Click statuses mock states -->
+                            <button class="status-action-btn btn-pickup">Mark Picked Up</button>
+                            <button class="status-action-btn btn-delivered" style="display: none;">Mark Delivered</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- RIGHT: Earnings & Recent Log -->
+            <aside class="recent-payouts-section">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">📋 Today's Deliveries</h3>
+                    <div class="delivery-log-list">
+
+                        <!-- Item 1 -->
+                        <div class="log-item">
+                            <div class="log-left">
+                                <span class="log-order-id">#UF-9068</span>
+                                <span class="log-time">Delivered at 11:20 AM</span>
+                            </div>
+                            <span class="log-payout">+ ₹90</span>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="log-item">
+                            <div class="log-left">
+                                <span class="log-order-id">#UF-9060</span>
+                                <span class="log-time">Delivered at 10:15 AM</span>
+                            </div>
+                            <span class="log-payout">+ ₹110</span>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="log-item">
+                            <div class="log-left">
+                                <span class="log-order-id">#UF-9051</span>
+                                <span class="log-time">Delivered at 09:00 AM</span>
+                            </div>
+                            <span class="log-payout">+ ₹95</span>
+                        </div>
+
+                    </div>
+                    <a href="deliveryOrders.html" class="sidebar-link">Find Available Deliveries →</a>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 FoodHub Inc. All rights reserved. Made with ❤️ for food lovers.</p>
+        </footer>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/premium-ui.js"></script>
+</body>
+</html>

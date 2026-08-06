@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodHub Menu Management - Add, edit, or delete items from your restaurant menu.">
+    <title>FoodHub | Manage Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/manageMenu.css">
+    <link rel="stylesheet" href="css/premium-system.css">
+    <link rel="icon" href="images/logo.jpg"/>
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="page-container">
+
+        <!-- Header / Navigation Bar -->
+        <header class="page-header">
+            <div class="brand-logo">
+                <a href="homePage.html" class="brand-link">
+                    <div class="logo-icon">
+                        <span class="logo-emoji">🍔</span>
+                    </div>
+                    <span class="logo-text">FoodHub</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="restaurantDashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="manageMenu.html" class="nav-item nav-active">🍕 Manage Menu</a>
+                <a href="restaurantOrders.html" class="nav-item">📦 Orders</a>
+                <a href="userProfile.jsp" class="nav-item">👤 Profile</a>
+            </nav>
+        </header>
+
+        <!-- Page Title & Actions -->
+        <section class="banner-section">
+            <div>
+                <h1 id="page-title">Manage Menu</h1>
+                <p class="page-subtitle">Add, edit, or remove items from your restaurant menu</p>
+            </div>
+            <button class="add-item-trigger-btn" id="open-modal-btn">➕ Add New Item</button>
+        </section>
+
+        <!-- Two Column Layout: Items List & Add/Edit Form Panel -->
+        <div class="menu-editor-grid">
+            
+            <!-- LEFT: Menu Items List -->
+            <main class="menu-list-section">
+                <h2 class="section-title">Current Menu Items (6)</h2>
+                
+                <div class="menu-items-container">
+
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item-row">
+                        <div class="item-visual">🍕</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Margherita Pizza</h3>
+                                <span class="item-tag tag-veg">Veg</span>
+                            </div>
+                            <p class="item-description">Classic tomato sauce, fresh mozzarella, and basil leaves.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹299</span>
+                                <span class="status-badge badge-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item-row">
+                        <div class="item-visual">🍕</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Pepperoni Supreme</h3>
+                                <span class="item-tag tag-nonveg">Non-Veg</span>
+                            </div>
+                            <p class="item-description">Spicy pepperoni, loaded double cheese, onions, and oregano.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹449</span>
+                                <span class="status-badge badge-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item-row">
+                        <div class="item-visual">🍝</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Alfredo Pasta</h3>
+                                <span class="item-tag tag-veg">Veg</span>
+                            </div>
+                            <p class="item-description">Creamy parmesan cheese sauce with fettuccine, garlic, and parsley.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹349</span>
+                                <span class="status-badge badge-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 4 -->
+                    <div class="menu-item-row">
+                        <div class="item-visual">🥗</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Caesar Salad</h3>
+                                <span class="item-tag tag-veg">Veg</span>
+                            </div>
+                            <p class="item-description">Fresh romaine, caesar dressing, croutons, and parmesan flakes.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹199</span>
+                                <span class="status-badge badge-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 5 -->
+                    <div class="menu-item-row">
+                        <div class="item-visual">🥤</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Iced Lemonade</h3>
+                                <span class="item-tag tag-veg">Veg</span>
+                            </div>
+                            <p class="item-description">Lemon juice, crushed mint, sugar syrup, and carbonated water.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹99</span>
+                                <span class="status-badge badge-active">Active</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                    <!-- Menu Item 6 -->
+                    <div class="menu-item-row item-inactive-row">
+                        <div class="item-visual">🍰</div>
+                        <div class="item-details">
+                            <div class="item-name-row">
+                                <h3 class="item-title">Tiramisu</h3>
+                                <span class="item-tag tag-veg">Veg</span>
+                            </div>
+                            <p class="item-description">Coffee-dipped savoiardi biscuits, mascarpone cream, and cocoa powder dust.</p>
+                            <div class="item-price-status">
+                                <span class="item-price">₹249</span>
+                                <span class="status-badge badge-inactive">Inactive</span>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <button class="icon-btn edit-btn" title="Edit">✏️</button>
+                            <button class="icon-btn delete-btn" title="Delete">🗑️</button>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+
+            <!-- RIGHT: Add / Edit Form Card -->
+            <aside class="form-section-card" id="form-container">
+                <div class="card">
+                    <h2 class="form-title" id="form-header-title">➕ Add Menu Item</h2>
+                    
+                    <form action="saveMenuItem" method="post" class="menu-form">
+                        
+                        <!-- Item Name -->
+                        <div class="form-group">
+                            <label for="item-name" class="form-label">
+                                <span class="label-icon">🍽️</span> Item Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="item-name" 
+                                name="itemName" 
+                                class="form-input" 
+                                placeholder="e.g. Garlic Bread" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Price -->
+                        <div class="form-group">
+                            <label for="item-price" class="form-label">
+                                <span class="label-icon">💰</span> Price (₹)
+                            </label>
+                            <input 
+                                type="number" 
+                                id="item-price" 
+                                name="price" 
+                                class="form-input" 
+                                placeholder="e.g. 199" 
+                                min="1"
+                                required
+                            >
+                        </div>
+
+                        <!-- Cuisine Tag / Type -->
+                        <div class="form-group">
+                            <label for="item-type" class="form-label">
+                                <span class="label-icon">🎭</span> Food Type
+                            </label>
+                            <select id="item-type" name="foodType" class="form-input form-select" required>
+                                <option value="" disabled selected>Select Veg/Non-Veg</option>
+                                <option value="Veg">Vegetarian</option>
+                                <option value="Non-Veg">Non-Vegetarian</option>
+                            </select>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="item-desc" class="form-label">
+                                <span class="label-icon">📝</span> Description
+                            </label>
+                            <textarea 
+                                id="item-desc" 
+                                name="description" 
+                                class="form-input form-textarea" 
+                                placeholder="Describe the taste, size, or ingredients..." 
+                                required
+                                rows="3"
+                            ></textarea>
+                        </div>
+
+                        <!-- Availability Status -->
+                        <div class="form-group">
+                            <label class="toggle-status-label">
+                                <input type="checkbox" id="item-status" name="isActive" checked>
+                                <span class="custom-toggle-btn"></span>
+                                Item Available for Order
+                            </label>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="form-actions-row">
+                            <button type="submit" class="submit-btn">Save Item</button>
+                            <button type="button" class="cancel-btn" id="cancel-form-btn">Cancel</button>
+                        </div>
+
+                    </form>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 FoodHub Inc. All rights reserved. Made with ❤️ for food lovers.</p>
+        </footer>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/premium-ui.js"></script>
+</body>
+</html>

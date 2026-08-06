@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodHub Restaurant Orders - Track, manage, and update order statuses in real time.">
+    <title>FoodHub | Restaurant Orders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/restaurantOrders.css">
+    <link rel="stylesheet" href="css/premium-system.css">
+    <link rel="icon" href="images/logo.jpg"/>
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+        <div class="shape shape-6"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="page-container">
+
+        <!-- Header / Navigation Bar -->
+        <header class="page-header">
+            <div class="brand-logo">
+                <a href="homePage.html" class="brand-link">
+                    <div class="logo-icon">
+                        <span class="logo-emoji">🍔</span>
+                    </div>
+                    <span class="logo-text">FoodHub</span>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="restaurantDashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="manageMenu.html" class="nav-item">🍕 Manage Menu</a>
+                <a href="restaurantOrders.html" class="nav-item nav-active">📦 Orders</a>
+                <a href="userProfile.jsp" class="nav-item">👤 Profile</a>
+            </nav>
+        </header>
+
+        <!-- Page Title & Quick Filter Section -->
+        <section class="banner-section">
+            <div>
+                <h1 id="page-title">Manage Orders</h1>
+                <p class="page-subtitle">Track incoming requests and update preparation states</p>
+            </div>
+            <div class="filter-pills">
+                <button class="filter-pill filter-active">All (5)</button>
+                <button class="filter-pill">⏳ Pending (2)</button>
+                <button class="filter-pill">🍳 Preparing (1)</button>
+                <button class="filter-pill">🛵 Out for Delivery (1)</button>
+                <button class="filter-pill">✅ Delivered (1)</button>
+            </div>
+        </section>
+
+        <!-- Orders Management Dashboard List -->
+        <main class="orders-log-container">
+
+            <!-- Active Order Item 1 (Pending Acceptance) -->
+            <div class="order-management-card card-pending">
+                <div class="card-meta-row">
+                    <div class="meta-left">
+                        <span class="order-id">#UF-9082</span>
+                        <span class="order-time">🕒 Just Now</span>
+                    </div>
+                    <div class="meta-right">
+                        <span class="status-badge badge-pending">Pending Acceptance</span>
+                    </div>
+                </div>
+                <div class="card-details-row">
+                    <div class="customer-block">
+                        <h3 class="block-title">👤 Customer Details</h3>
+                        <p class="detail-line"><strong>Name:</strong> John Doe</p>
+                        <p class="detail-line"><strong>Address:</strong> 123 Main Street, City Center</p>
+                        <p class="detail-line"><strong>Contact:</strong> +91 98765 43210</p>
+                    </div>
+                    <div class="items-block">
+                        <h3 class="block-title">🍽️ Ordered Items</h3>
+                        <ul class="items-list">
+                            <li>2x Margherita Pizza <span class="price-val">₹598</span></li>
+                            <li>1x Alfredo Pasta <span class="price-val">₹349</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-action-footer">
+                    <div class="payment-info">
+                        <span class="pay-method">💳 UPI Payment</span>
+                        <span class="total-price">Total: ₹947</span>
+                    </div>
+                    <div class="action-buttons-group">
+                        <button class="btn btn-accept">Accept Order</button>
+                        <button class="btn btn-reject">Reject Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Order Item 2 (Preparing) -->
+            <div class="order-management-card card-preparing">
+                <div class="card-meta-row">
+                    <div class="meta-left">
+                        <span class="order-id">#UF-9079</span>
+                        <span class="order-time">🕒 20 mins ago</span>
+                    </div>
+                    <div class="meta-right">
+                        <span class="status-badge badge-preparing">Preparing</span>
+                    </div>
+                </div>
+                <div class="card-details-row">
+                    <div class="customer-block">
+                        <h3 class="block-title">👤 Customer Details</h3>
+                        <p class="detail-line"><strong>Name:</strong> Alice Vance</p>
+                        <p class="detail-line"><strong>Address:</strong> 789 Pine Road, North Sector</p>
+                        <p class="detail-line"><strong>Contact:</strong> +91 99988 87766</p>
+                    </div>
+                    <div class="items-block">
+                        <h3 class="block-title">🍽️ Ordered Items</h3>
+                        <ul class="items-list">
+                            <li>1x Pepperoni Supreme <span class="price-val">₹449</span></li>
+                            <li>1x Caesar Salad <span class="price-val">₹199</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-action-footer">
+                    <div class="payment-info">
+                        <span class="pay-method">💵 Cash On Delivery</span>
+                        <span class="total-price">Total: ₹648</span>
+                    </div>
+                    <div class="action-buttons-group">
+                        <div class="status-select-wrapper">
+                            <select class="status-dropdown">
+                                <option value="pending">Pending</option>
+                                <option value="preparing" selected>Preparing</option>
+                                <option value="ready">Ready for Dispatch</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-update">Update Status</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Order Item 3 (Out for Delivery) -->
+            <div class="order-management-card card-delivery">
+                <div class="card-meta-row">
+                    <div class="meta-left">
+                        <span class="order-id">#UF-9075</span>
+                        <span class="order-time">🕒 45 mins ago</span>
+                    </div>
+                    <div class="meta-right">
+                        <span class="status-badge badge-delivery">Out for Delivery</span>
+                    </div>
+                </div>
+                <div class="card-details-row">
+                    <div class="customer-block">
+                        <h3 class="block-title">👤 Customer Details</h3>
+                        <p class="detail-line"><strong>Name:</strong> David Miller</p>
+                        <p class="detail-line"><strong>Address:</strong> 202 Elm Street, East Zone</p>
+                        <p class="detail-line"><strong>Delivery Agent:</strong> Rick (ID: #DP-80)</p>
+                    </div>
+                    <div class="items-block">
+                        <h3 class="block-title">🍽️ Ordered Items</h3>
+                        <ul class="items-list">
+                            <li>3x Margherita Pizza <span class="price-val">₹897</span></li>
+                            <li>2x Iced Lemonade <span class="price-val">₹198</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-action-footer">
+                    <div class="payment-info">
+                        <span class="pay-method">💳 Net Banking</span>
+                        <span class="total-price">Total: ₹1095</span>
+                    </div>
+                    <div class="action-buttons-group">
+                        <div class="status-select-wrapper">
+                            <select class="status-dropdown">
+                                <option value="pending">Pending</option>
+                                <option value="preparing">Preparing</option>
+                                <option value="ready">Ready for Dispatch</option>
+                                <option value="delivery" selected>Out for Delivery</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-update">Update Status</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 FoodHub Inc. All rights reserved. Made with ❤️ for food lovers.</p>
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/premium-ui.js"></script>
+</body>
+</html>
